@@ -38,5 +38,13 @@ services:
       MYSQL_DATABASE: pocket_calculator
       MYSQL_USER: pocket_calculator
       MYSQL_PASSWORD: password
+#    networks:
+#      network:
+#        ipv4_address: 172.24.0.1
 volumes:
   data:
+#networks:
+#  network:
+#    ipam:
+#      config:
+#        - subnet: 172.24.0.0/16

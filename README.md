@@ -21,8 +21,18 @@ Example of docker configuration with PHP, Nginx, MySQL and Laravel project insta
 For Nginx config check /images/nginx
 For PHP check /images/php-fpm
 
-#MySQL Host
+# MySQL Host
 If PHP project is not connecting to Database, get mysql container IP.
-<p>docker inspect some-mariadb | grep IPAddress<p>
+<p>docker inspect docker-nginx-php-mysql_mysql_1<p>
 Search for something like this:
 <p>"IPAddress": "172.18.0.2",</p>
+In project .env file set
+<p>DB_HOST=172.X.X.X</p>
+Than run (inside docker project file) 
+<p>php artisan migrate</p>
+
+# Test
+
+Checl browser 
+http://localhost:8080/
+http://pocketcalculator.local/
