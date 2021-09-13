@@ -36,3 +36,10 @@ Than run (inside docker project file)
 Checl browser 
 http://localhost:8080/
 http://pocketcalculator.local/
+
+To run PHP Unit test, go into docker
+<p>docker exec -it docker-nginx-php-mysql_php_1 bash</p>
+Go to project
+<p>cd pocket_calculator</p>
+Run unit tests
+<p>vendor/bin/phpunit</p>
